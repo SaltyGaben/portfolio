@@ -6,14 +6,12 @@ import Experience from './components/Experience.vue';
 </script>
 
 <template>
-  <div class="bg-background w-full h-screen relative">
-    <div class="w-4xl flex flex-col items-start justify-start mx-auto relative">
-      <Navbar />
-      <div class="flex flex-col mt-20 gap-40">
-        <About />
-        <Projects />
-        <Experience />
-      </div>
+  <main class="bg-background container mx-auto flex-1 px-4 max-w-4xl mb-40">
+    <Navbar />
+    <div class="flex flex-col mt-20 gap-40">
+      <About />
+      <Projects />
+      <Experience />
     </div>
-  </div>
+  </main>
 </template>
