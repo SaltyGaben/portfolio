@@ -8,7 +8,9 @@
             <h2 class="text-4xl font-extralight text-primary">Software Developer</h2>
         </div>
         <div class="flex flex-col sm:flex-row justify-between gap-10">
-            <div class="w-60 h-60 bg-white rounded-lg"></div>
+            <div class="w-60 h-60 bg-white rounded-lg text-black flex justify-center items-center ">Picture coming
+                soon..
+            </div>
             <div class="flex flex-col gap-2 w-full sm:w-3/5 font-light text-lg">
                 <p>As a passionate and dedicated Junior Full-Stack Developer, I thrive on solving complex problems and
                     building innovative solutions. My expertise spans across modern web and backend technologies,

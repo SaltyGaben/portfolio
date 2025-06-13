@@ -10,7 +10,6 @@ const experience = [
         date: '2024 - Present',
         location: 'Karlskrona, Sweden',
         technologies: ['Java', 'Spring Boot/Quarkus', 'Vue', 'Git', 'CI/CD', 'Agile'],
-        image: './src/assets/images/CGI-logo.png'
     }
 ]
 </script>
