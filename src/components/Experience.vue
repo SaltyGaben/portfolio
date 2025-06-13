@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card'
+import { MapPin, Clock } from 'lucide-vue-next'
 
 const experience = [
     {
@@ -16,12 +17,19 @@ const experience = [
 
 <template>
     <div class="flex flex-col items-center justify-center w-full h-full gap-10">
-        <Card v-for="experience in experience" :key="experience.title" class="w-11/12 shadow-xl/20 shadow-black">
+        <h1 class="text-7xl font-extralight tracking-widest">Experience</h1>
+        <Card v-for="experience in experience" :key="experience.title" class="w-11/12 shadow-xl/20 shadow-black gap-2">
             <CardHeader class="flex flex-col gap-2">
                 <CardTitle class="text-5xl font-bold">{{ experience.company }}</CardTitle>
                 <CardDescription class="text-xl text-foreground">{{ experience.title }}</CardDescription>
-                <CardDescription class="text-lg text-muted">{{ experience.date }}</CardDescription>
-                <CardDescription class="text-lg text-muted">{{ experience.location }}</CardDescription>
+                <CardDescription class="text-lg text-muted flex flex-row items-center gap-2">
+                    <Clock :size="18" />
+                    {{ experience.date }}
+                </CardDescription>
+                <CardDescription class="text-lg text-muted flex flex-row items-center gap-2">
+                    <MapPin :size="18" />
+                    {{ experience.location }}
+                </CardDescription>
             </CardHeader>
             <CardContent class="flex flex-col justify-center gap-2">
                 <div class="flex flex-row justify-start gap-2 w-full flex-wrap items-center">
