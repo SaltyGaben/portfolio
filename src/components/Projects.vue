@@ -32,7 +32,7 @@ const projects = [
         title: 'League Roller',
         description: 'A web application that allows users to randomly select a champion from League of Legends. \n They also have the ability to randomize items, summoner spells and runes.',
         technologies: ['Vue', 'TypeScript', 'Tailwind CSS', 'Shadcn', 'Riot API'],
-        image: './public/league-roller.png'
+        image: '/public/league-roller.png'
     }
 ]
 </script>
