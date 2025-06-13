@@ -6,6 +6,7 @@ import { watchOnce } from '@vueuse/core'
 import { ref } from 'vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import { SquareArrowOutUpRight } from 'lucide-vue-next'
+import leagueRollerImage from '../assets/images/league-roller.png';
 
 const api = ref<CarouselApi>()
 const totalCount = ref(0)
@@ -32,7 +33,7 @@ const projects = [
         title: 'League Roller',
         description: 'A web application that allows users to randomly select a champion from League of Legends. \n They also have the ability to randomize items, summoner spells and runes.',
         technologies: ['Vue', 'TypeScript', 'Tailwind CSS', 'Shadcn', 'Riot API'],
-        image: '/public/league-roller.png'
+        image: leagueRollerImage
     }
 ]
 </script>
