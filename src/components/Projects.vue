@@ -7,6 +7,7 @@ import { ref } from 'vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import { SquareArrowOutUpRight } from 'lucide-vue-next'
 import leagueRollerImage from '../assets/images/league-roller.png';
+import iTelemetryImage from '../assets/images/i-telemetry.png'
 
 const api = ref<CarouselApi>()
 const totalCount = ref(0)
@@ -33,8 +34,17 @@ const projects = [
         title: 'League Roller',
         description: 'A web application that allows users to randomly select a champion from League of Legends. \n They also have the ability to randomize items, summoner spells and runes.',
         technologies: ['Vue', 'TypeScript', 'Tailwind CSS', 'Shadcn', 'Riot API'],
-        image: leagueRollerImage
-    }
+        image: leagueRollerImage,
+        githubLink: 'https://github.com/SaltyGaben/league-roller',
+        visitLink: 'https://league-roller.vercel.app/'
+    },
+    {
+        title: 'iTelemetry',
+        description: 'A simple overlay that shows inputs, speed, gears, fuel levels for iRacing. Includes a self-hostable server to share fuel between teammates',
+        technologies: ['Typescript', 'Javascript', 'iRacing SDK', 'Websockets'],
+        image: iTelemetryImage,
+        githubLink: 'https://github.com/SaltyGaben/i-telemetry'
+    },
 ]
 </script>
 
@@ -59,15 +69,17 @@ const projects = [
                                     </div>
                                     <span class="text-sm text-gray-500">{{ project.description }}</span>
                                     <div class="flex flex-row justify-start items-center gap-4 mt-2">
-                                        <a href="https://github.com/SaltyGaben/league-roller" target="_blank"
+                                        <a :href="project.githubLink" target="_blank"
                                             class="text-sm text-primary hover:text-primary/80 group">
                                             <GithubIcon size="30" class="hover:scale-110 transition-all" />
                                         </a>
-                                        <Button
-                                            class="rounded-2xl flex flex-row items-center gap-2 hover:cursor-pointer hover:scale-105 transition-all">
-                                            Visit
-                                            <SquareArrowOutUpRight :size="16" />
-                                        </Button>
+                                        <a v-if="project.visitLink" :href="project.visitLink" target="_blank">
+                                            <Button
+                                                class="rounded-2xl flex flex-row items-center gap-2 hover:cursor-pointer hover:scale-105 transition-all">
+                                                Visit
+                                                <SquareArrowOutUpRight :size="16" />
+                                            </Button>
+                                        </a>
                                     </div>
                                 </CardContent>
                             </Card>
