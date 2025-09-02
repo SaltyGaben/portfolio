@@ -5,7 +5,7 @@ import { MapPin, Clock } from 'lucide-vue-next'
 const experience = [
     {
         title: 'Consultant',
-        description: 'I am a consultant at CGI, where I work on a project for a client. I am a full-stack developer, and I am responsible for the development of the front-end and back-end of the project.',
+        description: 'I am a consultant at CGI where I work as a full-stack developer. I am responsible for the development of the frontend and backend of the project.',
         company: 'CGI',
         date: '2024 - Present',
         location: 'Karlskrona, Sweden',
@@ -15,7 +15,7 @@ const experience = [
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center w-full h-full gap-10">
+    <div class="flex flex-col items-center justify-center w-full h-full gap-10 z-1">
         <h1 class="text-7xl font-extralight tracking-widest">Experience</h1>
         <Card v-for="experience in experience" :key="experience.title" class="w-11/12 shadow-xl/20 shadow-black gap-2">
             <CardHeader class="flex flex-col gap-2">

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-10 z-1">
         <div class="flex flex-col gap-2">
             <h1 class="text-7xl">Hampus Tuvesson</h1>
             <h2 class="text-4xl font-extralight text-primary">Software Developer</h2>
@@ -14,7 +14,7 @@
                     including Vue, Quarkus, Java, and TypeScript.
                 </p>
                 <p>Currently, I contribute my skills as a consultant at CGI, where I leverage these
-                    technologies—alongside CI/CD and Agile methodologies—to help clients develop robust and effective
+                    technologies alongside CI/CD and Agile methodologies to help clients develop robust and effective
                     software solutions tailored to their needs.
                 </p>
             </div>

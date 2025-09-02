@@ -49,7 +49,7 @@ const projects = [
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center w-full px-4 sm:px-0 gap-10">
+    <div class="flex flex-col items-center justify-center w-full px-4 sm:px-0 gap-10 z-1">
         <h1 class="text-7xl font-extralight tracking-widest">Projects</h1>
         <div class="flex flex-col items-center justify-center w-full">
             <Carousel class="h-2/3 flex items-center justify-center w-full sm:w-10/12" @init-api="setApi">
@@ -95,6 +95,5 @@ const projects = [
                 </span>
             </div>
         </div>
-
     </div>
 </template>

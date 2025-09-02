@@ -24,33 +24,35 @@ const discordHover = ref(false);
 
 <template>
     <div
-        class="sticky top-0 z-50 mx-auto flex max-w-4xl items-start justify-between pt-4 xl:items-center h-20 bg-background">
-        <div class="flex flex-row items-center gap-4">
-            <a href="https://github.com/SaltyGaben" class="hover:cursor-pointer hover:scale-115 transition-all"
-                @mouseenter="githubHover = true" @mouseleave="githubHover = false">
-                <GithubIcon :color="githubHover ? primaryColor : whiteColor" />
-            </a>
-            <a href="https://www.linkedin.com/in/hampustuvesson/"
-                class="hover:cursor-pointer hover:scale-115 transition-all" @mouseenter="linkedinHover = true"
-                @mouseleave="linkedinHover = false">
-                <LinkedInIcon :color="linkedinHover ? primaryColor : whiteColor" />
-            </a>
-            <a href="https://x.com/SaltyGaben" class="hover:cursor-pointer hover:scale-115 transition-all"
-                @mouseenter="xHover = true" @mouseleave="xHover = false">
-                <XIcon :color="xHover ? primaryColor : whiteColor" />
-            </a>
-            <a href="https://discord.com/users/302204054753378319"
-                class="hover:cursor-pointer hover:scale-115 transition-all" @mouseenter="discordHover = true"
-                @mouseleave="discordHover = false">
-                <DiscordIcon :size="32" :color="discordHover ? primaryColor : whiteColor" />
-            </a>
-        </div>
-        <div class="flex flex-row items-center gap-2">
-            <Button class="flex flex-row items-center gap-2  hover:cursor-pointer hover:bg-primary" variant="ghost"
-                @click="scrollToContact">
-                <Mail />
-                <h1>Contact</h1>
-            </Button>
+        class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-20 bg-transparent backdrop-blur-md border-b border-border/10">
+        <div class="container mx-auto flex justify-between items-center max-w-4xl px-4">
+            <div class="flex flex-row items-center gap-4">
+                <a href="https://github.com/SaltyGaben" class="hover:cursor-pointer hover:scale-115 transition-all"
+                    @mouseenter="githubHover = true" @mouseleave="githubHover = false">
+                    <GithubIcon :color="githubHover ? primaryColor : whiteColor" />
+                </a>
+                <a href="https://www.linkedin.com/in/hampustuvesson/"
+                    class="hover:cursor-pointer hover:scale-115 transition-all" @mouseenter="linkedinHover = true"
+                    @mouseleave="linkedinHover = false">
+                    <LinkedInIcon :color="linkedinHover ? primaryColor : whiteColor" />
+                </a>
+                <a href="https://x.com/SaltyGaben" class="hover:cursor-pointer hover:scale-115 transition-all"
+                    @mouseenter="xHover = true" @mouseleave="xHover = false">
+                    <XIcon :color="xHover ? primaryColor : whiteColor" />
+                </a>
+                <a href="https://discord.com/users/302204054753378319"
+                    class="hover:cursor-pointer hover:scale-115 transition-all" @mouseenter="discordHover = true"
+                    @mouseleave="discordHover = false">
+                    <DiscordIcon :size="32" :color="discordHover ? primaryColor : whiteColor" />
+                </a>
+            </div>
+            <div class="flex flex-row items-center gap-2">
+                <Button class="flex flex-row items-center gap-2  hover:cursor-pointer hover:bg-primary" variant="ghost"
+                    @click="scrollToContact">
+                    <Mail />
+                    <h1>Contact</h1>
+                </Button>
+            </div>
         </div>
     </div>
 

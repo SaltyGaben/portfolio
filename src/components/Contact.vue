@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div id="contact" class="flex flex-col gap-10 w-full items-center">
+    <div id="contact" class="flex flex-col gap-10 w-full items-center z-1">
         <h1 class="text-7xl font-extralight tracking-widest">Contact</h1>
         <div class="flex flex-col gap-2 w-full sm:w-2/3 font-light text-lg">
             <p>
