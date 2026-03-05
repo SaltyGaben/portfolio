@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from './ui/button'
-import { Carousel, type CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { watchOnce } from '@vueuse/core'
 import { ref } from 'vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import { SquareArrowOutUpRight } from 'lucide-vue-next'
-import leagueRollerImage from '../assets/images/league-roller.png';
+import leagueRollerImage from '../assets/images/league-roller.png'
 import iTelemetryImage from '../assets/images/i-telemetry.png'
+import SimracinDashboardIMage from '../assets/images/simracing-dashboard.png'
 
-const api = ref<CarouselApi>()
+const api = ref()
 const totalCount = ref(0)
 const current = ref(0)
 
-function setApi(val: CarouselApi) {
-    api.value = val
+function setApi(val: any) {
+	api.value = val
 }
 
 watchOnce(api, (api) => {
@@ -45,11 +46,22 @@ const projects = [
         image: iTelemetryImage,
         githubLink: 'https://github.com/SaltyGaben/i-telemetry'
     },
+    {
+        title: 'Simracing Dashboard',
+        description: 'A dashboard for simracing that displays data captured from iTelemetry. The dashboard also has functions like stint planning, fuel calculation, availability checks and setup sharing.',
+        technologies: ['Nuxt', 'Nuxt UI', 'Convex', 'Clerk', 'Nuxt-Charts'],
+        image: SimracinDashboardIMage,
+        githubLink: 'https://github.com/SaltyGaben/simracing-dashboard'
+    }
 ]
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center w-full px-4 sm:px-0 gap-10 z-1">
+    <div class="flex flex-col items-center justify-center w-full px-4 sm:px-0 gap-10 z-1" v-motion="{
+        initial: { opacity: 0, y: 30 },
+        whileInView: { opacity: 1, y: 0 },
+        transition: { duration: 0.4 }
+    }">
         <h1 class="text-7xl font-extralight tracking-widest">Projects</h1>
         <div class="flex flex-col items-center justify-center w-full">
             <Carousel class="h-2/3 flex items-center justify-center w-full sm:w-10/12" @init-api="setApi">
